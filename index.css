@@ -1,0 +1,9 @@
+.title-container {
+  width: 100%;
+  text-align: center;
+}
+
+.button-inner-container {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <title>Drum Machine</title>
+  </head>
+  <body>
+    <div class="title-container">
+      <h1>Backbone Drum Machine</h1>
+    </div>
+
+    <table class="table">
+      <tbody class="drum-machine-table">
+        <tr id="tr-1"></tr>
+        <tr id="tr-2"></tr>
+        <tr id="tr-3"></tr>
+      </tbody>
+    </table>
+
+    <script type="text/template" class="drum-button-template">
+      <div class="button-inner-container">
+        <button type="button" <%= pressed ? 'class="btn btn-danger drum-button"' : 'class="btn btn-secondary drum-button"'%>>
+          <%= title %>
+          <audio className='clip' id=<%= audioId %> src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"></audio>
+         </button>
+      </div>
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://underscorejs.org/underscore-min.js"></script>
+    <script src="http://backbonejs.org/backbone-min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
